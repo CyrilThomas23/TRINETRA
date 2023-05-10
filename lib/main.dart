@@ -71,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 await availableCameras().then((value) => Navigator.push(context, MaterialPageRoute(builder: (_)=>CameraPage(cameras: value,))));
               },
               style: ElevatedButton.styleFrom(
-                    primary: const Color.fromARGB(255, 7, 7, 7),)
+                    primary: Color.fromARGB(255, 58, 57, 57),)
             ),
             ),
 
