@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
 import 'package:newtrinetra/camerapage.dart';
+import 'package:newtrinetra/splash.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,8 @@ class MyApp extends StatelessWidget {
         
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'TRINETRA'),
+      debugShowCheckedModeBanner: false,
+      home: const Splash(),
     );
   }
 }
@@ -57,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   },
                   
                   style: ElevatedButton.styleFrom(
-                        primary: Color.fromARGB(255, 0, 0, 0),)
+                        primary: const Color.fromARGB(255, 0, 0, 0),)
             ),
             ),
             SizedBox( 
@@ -69,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 await availableCameras().then((value) => Navigator.push(context, MaterialPageRoute(builder: (_)=>CameraPage(cameras: value,))));
               },
               style: ElevatedButton.styleFrom(
-                    primary: Color.fromARGB(255, 7, 7, 7),)
+                    primary: const Color.fromARGB(255, 7, 7, 7),)
             ),
             ),
 
